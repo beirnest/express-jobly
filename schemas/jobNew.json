@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://our.company.com/jobNew.schema.json",
+    "type": "object",
+    "title": "Root Schema",
+    "required": [
+        "title",
+        "companyHandle"
+    ],
+    "properties": {
+        "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+        },
+        "salary": {
+            "type": "integer"
+        },
+        "equity": {
+            "type": "string",
+            "pattern": "0|(0?\\.[0-9]+)"
+        },
+        "companyHandle": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+        }
+    },
+    "additionalProperties": false
+}
